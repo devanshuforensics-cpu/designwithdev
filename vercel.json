@@ -1,8 +1,6 @@
 {
   "redirects": [
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.designwithdev.in" }], "destination": "https://designwithdev.in/$1", "permanent": true },
-    { "source": "/website-design-panipat", "destination": "/", "permanent": true },
-    { "source": "/panipat-web-designer", "destination": "/", "permanent": true }
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.designwithdev.in" }], "destination": "https://designwithdev.in/$1", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/$1.html" }
