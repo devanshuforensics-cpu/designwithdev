@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://designwithdev.in/</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/panipat-web-designer</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/website-design-panipat</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/web-design-company-panipat</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/freelance-web-designer-panipat</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/seo-services-panipat</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/website-development-panipat</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/ecommerce-website-panipat</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/sitemap</loc><lastmod>2026-03-07</lastmod></url>
-  <url><loc>https://designwithdev.in/web-design-services-panipat</loc><lastmod>2026-03-07</lastmod></url>
+  <url><loc>https://designwithdev.in/</loc><priority>1.0</priority></url>
+  <url><loc>https://designwithdev.in/about</loc><priority>0.8</priority></url>
+  <url><loc>https://designwithdev.in/works</loc><priority>0.8</priority></url>
+  <url><loc>https://designwithdev.in/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://designwithdev.in/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://designwithdev.in/seo-services-panipat</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/web-design-company-panipat</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/freelance-web-designer-panipat</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/panipat-web-designer</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/website-design-panipat</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/website-development-panipat</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/web-developer-panipat</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/ecommerce-website-panipat</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/freelance-web-designer-haryana</loc><priority>0.9</priority></url>
+  <url><loc>https://designwithdev.in/web-design-services-panipat</loc><priority>0.8</priority></url>
 </urlset>
