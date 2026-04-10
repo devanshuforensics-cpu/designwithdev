@@ -1,0 +1,45 @@
+#!/bin/bash
+
+echo "Running HTML structure check..."
+failed=0
+
+files=$(find . -type f -name "*.html" -not -path "./.git/*")
+
+for f in $files; do
+  html_open=$(grep -Eic '<html([[:space:]]|>)' "$f" 2>/dev/null || echo 0)
+  html_close=$(grep -Eic '</html>' "$f" 2>/dev/null || echo 0)
+  head_open=$(grep -Eic '<head([[:space:]]|>)' "$f" 2>/dev/null || echo 0)
+  head_close=$(grep -Eic '</head>' "$f" 2>/dev/null || echo 0)
+  body_open=$(grep -Eic '<body([[:space:]]|>)' "$f" 2>/dev/null || echo 0)
+  body_close=$(grep -Eic '</body>' "$f" 2>/dev/null || echo 0)
+
+  if [ "$html_open" -ne 1 ] || [ "$html_close" -ne 1 ] || [ "$head_open" -ne 1 ] || [ "$head_close" -ne 1 ] || [ "$body_open" -ne 1 ] || [ "$body_close" -ne 1 ]; then
+    echo "ERROR: $f has invalid HTML structure"
+    echo "  <html:  $html_open"
+    echo "  </html>: $html_close"
+    echo "  <head:  $head_open"
+    echo "  </head>: $head_close"
+    echo "  <body:  $body_open"
+    echo "  </body>: $body_close"
+    failed=1
+    continue
+  fi
+
+  order=$(grep -Eio '<html([[:space:]]|>)|</html>|<head([[:space:]]|>)|</head>|<body([[:space:]]|>)|</body>' "$f" | tr -d '\r' | tr '\n' '|')
+  case "$order" in
+    *'<html'*'|<head'*'|</head>|<body'*'|</body>|</html>|'*) ;;
+    *)
+      echo "ERROR: $f has tags out of order"
+      echo "  $order"
+      failed=1
+      ;;
+  esac
+done
+
+if [ "$failed" -eq 1 ]; then
+  echo "HTML structure check failed. Fix errors before committing."
+  exit 1
+fi
+
+echo "HTML structure check passed."
+exit 0
